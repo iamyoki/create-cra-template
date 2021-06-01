@@ -26,9 +26,11 @@ async function generateTemplateJson(outputDir = path_1.default.join(process.cwd(
     delete dependencies['make-cra-template'];
     delete devDependencies['make-cra-template'];
     const templateJson = {
-        dependencies,
-        devDependencies,
-        ...rest
+        package: {
+            dependencies,
+            devDependencies,
+            ...rest
+        }
     };
     await fs_extra_1.default.ensureDir(outputDir || path_1.default.join(process.cwd(), 'build-template'));
     await jsonfile_1.default.writeFile(path_1.default.join(outputDir, 'template.json'), templateJson, { spaces: 2 });
