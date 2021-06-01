@@ -4,7 +4,7 @@ import path from 'path'
 import signale from 'signale'
 
 export default async function generateTemplateFiles(
-  outputDir: string = path.join(process.cwd(), 'build-template')
+  outputDir: string = path.join(process.cwd())
 ) {
   await fs.ensureDir(path.join(outputDir, 'template'))
 
@@ -15,7 +15,8 @@ export default async function generateTemplateFiles(
       '*',
       '!package-lock.json',
       '!yarn.lock',
-      `!${path.basename(outputDir)}`
+      '!template.json',
+      '!template',
     ],
     {
       onlyFiles: false,

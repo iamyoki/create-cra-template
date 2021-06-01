@@ -4,7 +4,7 @@ import path from 'path'
 import signale from 'signale'
 
 export default async function generateTemplateJson(
-  outputDir: string = path.join(process.cwd(), 'build-template')
+  outputDir: string = path.join(process.cwd())
 ) {
   // Get package.json file path
   const packageFilePath = path.join(process.cwd(), 'package.json')

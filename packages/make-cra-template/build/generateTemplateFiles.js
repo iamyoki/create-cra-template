@@ -7,14 +7,15 @@ const fs_extra_1 = __importDefault(require("fs-extra"));
 const globby_1 = __importDefault(require("globby"));
 const path_1 = __importDefault(require("path"));
 const signale_1 = __importDefault(require("signale"));
-async function generateTemplateFiles(outputDir = path_1.default.join(process.cwd(), 'build-template')) {
+async function generateTemplateFiles(outputDir = path_1.default.join(process.cwd())) {
     await fs_extra_1.default.ensureDir(path_1.default.join(outputDir, 'template'));
     const inputDir = process.cwd();
     for await (const p of globby_1.default.stream([
         '*',
         '!package-lock.json',
         '!yarn.lock',
-        `!${path_1.default.basename(outputDir)}`
+        '!template.json',
+        '!template',
     ], {
         onlyFiles: false,
         dot: true,

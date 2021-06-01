@@ -7,7 +7,7 @@ const fs_extra_1 = __importDefault(require("fs-extra"));
 const jsonfile_1 = __importDefault(require("jsonfile"));
 const path_1 = __importDefault(require("path"));
 const signale_1 = __importDefault(require("signale"));
-async function generateTemplateJson(outputDir = path_1.default.join(process.cwd(), 'build-template')) {
+async function generateTemplateJson(outputDir = path_1.default.join(process.cwd())) {
     // Get package.json file path
     const packageFilePath = path_1.default.join(process.cwd(), 'package.json');
     // Check file exist
