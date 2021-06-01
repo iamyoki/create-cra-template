@@ -2,7 +2,8 @@
   "name": "cra-template-popular",
   "version": "1.0.3",
   "files": [
-    "build-template"
+    "template.json",
+    "template"
   ],
   "dependencies": {
     "@emotion/react": "^11.4.0",
