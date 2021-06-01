@@ -1,8 +1,9 @@
 {
-  "name": "cra-template-yoki",
+  "name": "make-cra-template",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/templates/*"
   ],
   "devDependencies": {
     "lerna": "^4.0.0",

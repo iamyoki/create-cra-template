@@ -2,18 +2,26 @@
   "name": "make-cra-template",
   "version": "1.0.0",
   "main": "build/index.js",
+  "bin": {
+    "make-cra-template": "./bin/make-cra-template.js",
+    "mct": "./bin/make-cra-template.js"
+  },
   "author": "yokiyuqian@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "@types/fs-extra": "^9.0.11"
+  },
+  "dependencies": {
+    "@types/jsonfile": "^6.0.0",
+    "@types/signale": "^1.4.1",
+    "fs-extra": "^10.0.0",
+    "globby": "^11.0.3",
     "jsonfile": "^6.1.0",
     "signale": "^1.4.0",
     "typescript": "^4.3.2"
   },
-  "dependencies": {
-    "@types/jsonfile": "^6.0.0",
-    "@types/signale": "^1.4.1"
-  },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "tsc -w"
   }
 }
