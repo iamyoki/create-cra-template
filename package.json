@@ -1,0 +1,16 @@
+{
+  "name": "cra-template-yoki",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run --parallel start"
+  },
+  "dependencies": {}
+}
