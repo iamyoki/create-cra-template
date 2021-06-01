@@ -10,7 +10,7 @@
     "typescript": "^4.3.2"
   },
   "scripts": {
-    "new-version": "lerna version --conventional-commits",
+    "new-version": "lerna version --conventional-commits --no-push",
     "start": "lerna run --parallel start",
     "build": "lerna run --parallel start"
   },
