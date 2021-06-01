@@ -35,9 +35,11 @@ export default async function generateTemplateJson(
   delete devDependencies['make-cra-template']
 
   const templateJson = {
-    dependencies,
-    devDependencies,
-    ...rest
+    package: {
+      dependencies,
+      devDependencies,
+      ...rest
+    }
   }
 
   await fs.ensureDir(outputDir || path.join(process.cwd(), 'build-template'))
