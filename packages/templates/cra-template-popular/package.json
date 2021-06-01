@@ -1,6 +1,6 @@
 {
   "name": "cra-template-popular",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "files": [
     "template.json",
     "template"
@@ -10,7 +10,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "make-cra-template": "^1.0.5",
+    "make-cra-template": "^1.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
