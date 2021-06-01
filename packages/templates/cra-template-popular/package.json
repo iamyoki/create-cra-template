@@ -1,6 +1,7 @@
 {
   "name": "cra-template-popular",
   "version": "1.0.1",
+  "files": ["build-template"],
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@testing-library/jest-dom": "^5.11.4",
