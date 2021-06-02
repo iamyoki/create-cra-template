@@ -2598,7 +2598,7 @@
     lz-string "^1.4.4"
     pretty-format "^26.6.2"
 
-"@testing-library/jest-dom@^5.11.4":
+"@testing-library/jest-dom@^5.11.4", "@testing-library/jest-dom@^5.12.0":
   version "5.12.0"
   resolved "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.12.0.tgz#6a5d340b092c44b7bce17a4791b47d9bc2c61443"
   integrity sha512-N9Y82b2Z3j6wzIoAqajlKVF1Zt7sOH0pPee0sUHXHc5cv2Fdn23r+vpWm0MBBoGJtPOly5+Bdx1lnc3CD+A+ow==
@@ -2612,7 +2612,7 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^11.1.0":
+"@testing-library/react@^11.1.0", "@testing-library/react@^11.2.7":
   version "11.2.7"
   resolved "https://registry.npmjs.org/@testing-library/react/-/react-11.2.7.tgz#b29e2e95c6765c815786c0bc1d5aed9cb2bf7818"
   integrity sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==
@@ -2620,7 +2620,7 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^12.1.10":
+"@testing-library/user-event@^12.1.10", "@testing-library/user-event@^12.8.3":
   version "12.8.3"
   resolved "https://registry.npmjs.org/@testing-library/user-event/-/user-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
   integrity sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ==
@@ -13753,7 +13753,7 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
-web-vitals@^1.0.1:
+web-vitals@^1.0.1, web-vitals@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
   integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
