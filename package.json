@@ -1,5 +1,5 @@
 {
-  "name": "make-cra-template",
+  "name": "create-cra-template",
   "private": true,
   "workspaces": [
     "packages/*",
@@ -13,11 +13,11 @@
   },
   "scripts": {
     "new-version": "lerna version --conventional-commits",
-    "build:mct": "lerna run build --scope make-cra-template",
-    "build:templates": "lerna exec mct --scope cra-template-*",
-    "build": "yarn build:mct && yarn build:templates",
-    "start:mct": "lerna run start --scope make-cra-template",
-    "start:templates": "chokidar './packages/make-cra-template/build' -c 'yarn run build:templates'",
+    "build:cct": "lerna run build --scope create-cra-template",
+    "build:templates": "lerna exec cct --scope cra-template-*",
+    "build": "yarn build:cct && yarn build:templates",
+    "start:cct": "lerna run start --scope create-cra-template",
+    "start:templates": "chokidar './packages/create-cra-template/build' -c 'yarn run build:templates'",
     "start:app": "./bin/start-app.js",
     "start": "./bin/start.js"
   },

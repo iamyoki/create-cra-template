@@ -34,10 +34,10 @@ export default async function generateTemplateJson(
     delete dependencies['react']
     delete dependencies['react-dom']
     delete dependencies['react-scripts']
-    delete dependencies['make-cra-template']
+    delete dependencies['create-cra-template']
   }
   if (devDependencies) {
-    delete devDependencies['make-cra-template']
+    delete devDependencies['create-cra-template']
   }
 
   const templateJson = {

@@ -19,7 +19,7 @@ inquirer
     const scope = answer['cra-template']
 
     concurrently([
-      'yarn:start:mct',
+      'yarn:start:cct',
       'yarn:start:templates',
       { command: `lerna run start --scope ${scope}`, name: 'cra-template' }
     ])
