@@ -39,7 +39,7 @@ yarn create cra-template
 Example:
 ```json
 {
-  name: 'cra-template-ui'
+  "name": "cra-template-ui"
 }
 ```
 
