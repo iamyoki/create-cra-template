@@ -13,20 +13,22 @@ async function generateTemplateFiles(outputDir = path_1.default.join(process.cwd
     for await (const p of globby_1.default.stream([
         '*',
         '!package-lock.json',
+        '!package.json',
         '!yarn.lock',
         '!template.json',
-        '!template',
+        '!template'
     ], {
         onlyFiles: false,
         dot: true,
         deep: 1,
         gitignore: true
     })) {
-        await fs_extra_1.default.copy(path_1.default.join(process.cwd(), p.toString()), path_1.default.resolve(outputDir, 'template', p.toString()), {
+        const isGitignore = path_1.default.basename(p.toString()) === '.gitignore';
+        await fs_extra_1.default.copy(path_1.default.join(process.cwd(), p.toString()), path_1.default.resolve(outputDir, 'template', isGitignore ? 'gitignore' : p.toString()), {
             overwrite: true,
             recursive: true
         });
-        signale_1.default.success(`Generated: template/${path_1.default.basename(p.toString())}`);
+        signale_1.default.success(`Generated: template/${isGitignore ? 'gitignore' : path_1.default.basename(p.toString())}`);
     }
 }
 exports.default = generateTemplateFiles;

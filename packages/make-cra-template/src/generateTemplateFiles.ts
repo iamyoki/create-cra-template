@@ -14,9 +14,10 @@ export default async function generateTemplateFiles(
     [
       '*',
       '!package-lock.json',
+      '!package.json',
       '!yarn.lock',
       '!template.json',
-      '!template',
+      '!template'
     ],
     {
       onlyFiles: false,
@@ -25,14 +26,20 @@ export default async function generateTemplateFiles(
       gitignore: true
     }
   )) {
+    const isGitignore = path.basename(p.toString()) === '.gitignore'
+
     await fs.copy(
       path.join(process.cwd(), p.toString()),
-      path.resolve(outputDir, 'template', p.toString()),
+      path.resolve(
+        outputDir,
+        'template',
+        isGitignore ? 'gitignore' : p.toString()
+      ),
       {
         overwrite: true,
         recursive: true
       }
     )
-    signale.success(`Generated: template/${path.basename(p.toString())}`)
+    signale.success(`Generated: template/${isGitignore ? 'gitignore' : path.basename(p.toString())}`)
   }
 }

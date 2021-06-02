@@ -22,17 +22,23 @@ export default async function generateTemplateJson(
   const {
     name,
     version,
+    files,
     private: p,
     scripts,
     dependencies,
     devDependencies,
     ...rest
   } = packageJson
-  delete dependencies['react']
-  delete dependencies['react-dom']
-  delete dependencies['react-scripts']
-  delete dependencies['make-cra-template']
-  delete devDependencies['make-cra-template']
+  // Remove unused fileds
+  if (dependencies) {
+    delete dependencies['react']
+    delete dependencies['react-dom']
+    delete dependencies['react-scripts']
+    delete dependencies['make-cra-template']
+  }
+  if (devDependencies) {
+    delete devDependencies['make-cra-template']
+  }
 
   const templateJson = {
     package: {
@@ -44,6 +50,7 @@ export default async function generateTemplateJson(
 
   await fs.ensureDir(outputDir || path.join(process.cwd(), 'build-template'))
 
+  // Write template.json
   await jsonfile.writeFile(
     path.join(outputDir, 'template.json'),
     templateJson,
@@ -51,4 +58,27 @@ export default async function generateTemplateJson(
   )
 
   signale.success('Generated: template.json')
+
+  // Modify pacakge.json files
+  await jsonfile
+    .writeFile(
+      packageFilePath,
+      {
+        ...(await jsonfile.readFile(packageFilePath)),
+        files: [
+          ...new Set(
+            [packageJson.files]
+              .flat()
+              .concat(['template.json', 'template'])
+              .filter(item => item)
+          )
+        ]
+      },
+      { spaces: 2 }
+    )
+    .catch(err => {
+      console.error(err)
+    })
+
+  signale.star('Modified: package.json files field')
 }
