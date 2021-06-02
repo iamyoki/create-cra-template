@@ -1,6 +1,6 @@
 {
   "name": "make-cra-template",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "main": "build/index.js",
   "bin": {
     "make-cra-template": "./bin/make-cra-template.js",
