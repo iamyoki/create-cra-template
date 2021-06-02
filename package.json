@@ -13,7 +13,6 @@
   },
   "scripts": {
     "new-version": "lerna version --conventional-commits",
-    "publish": "lerna publish",
     "build:mct": "lerna run build --scope make-cra-template",
     "build:templates": "lerna exec mct --scope cra-template-*",
     "build": "yarn build:mct && yarn build:templates",
