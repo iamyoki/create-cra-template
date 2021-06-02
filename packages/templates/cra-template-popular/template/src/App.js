@@ -16,7 +16,6 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          <h1>Popular</h1>
         </a>
       </header>
     </div>
