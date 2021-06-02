@@ -1,10 +1,10 @@
 {
-  "name": "make-cra-template",
+  "name": "create-cra-template",
   "version": "1.0.10",
   "main": "build/index.js",
   "bin": {
-    "make-cra-template": "./bin/make-cra-template.js",
-    "mct": "./bin/make-cra-template.js"
+    "create-cra-template": "./bin/create-cra-template.js",
+    "cct": "./bin/create-cra-template.js"
   },
   "author": "yokiyuqian@gmail.com",
   "license": "MIT",
