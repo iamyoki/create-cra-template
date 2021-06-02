@@ -1,13 +1,30 @@
 {
   "name": "create-cra-template",
   "version": "1.0.11",
+  "description": "A cli-tool to generate cra-template by current create-react-app project.",
+  "keywords": [
+    "cra",
+    "cra-template",
+    "generator",
+    "react",
+    "cli",
+    "create-react-app",
+    "create react template"
+  ],
   "main": "build/index.js",
   "bin": {
     "create-cra-template": "./bin/create-cra-template.js",
     "cct": "./bin/create-cra-template.js"
   },
-  "author": "yokiyuqian@gmail.com",
+  "author": {
+    "name": "Yoki Yu",
+    "email": "yokiyuqian@gmail.com",
+    "url": "https://github.com/iamyoki"
+  },
   "license": "MIT",
+  "repository": "iamyoki/create-cra-template",
+  "bugs": "https://github.com/iamyoki/create-cra-template/issues",
+  "homepage": "https://github.com/iamyoki/create-cra-template/tree/main/packages/create-cra-template",
   "devDependencies": {
     "@types/fs-extra": "^9.0.11"
   },
