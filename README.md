@@ -25,9 +25,37 @@ A cli tool to generate cra-template from current create-react-app project.
 
 ## Getting Started
 
-Inside your create-react-app project:
+1. Inside your own create-react-app project:
 ```shell
 npx create-cra-template
 # or
 yarn create cra-template
 ```
+
+`template.json` and `template` will be generated. You can also edit `template.json` manually.
+
+2. [Make sure your package.json name is `cra-template-[YOUR_TEMPLATE_NAME]`](https://create-react-app.dev/docs/custom-templates#building-a-template)
+
+Example:
+```json
+{
+  name: 'cra-template-ui'
+}
+```
+
+3. Publish to npm
+```shell
+npm login
+npm publish
+```
+
+4. Use your own template
+
+Try to create a new project from your template:
+```shell
+npx create-react-app --template [YOUR_TEMPLATE_NAME]
+# or
+yarn create react-app --template [YOUR_TEMPLATE_NAME]
+```
+
+🎉 That's it!
