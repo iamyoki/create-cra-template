@@ -25,6 +25,10 @@ A cli tool to generate cra-template from current create-react-app project.
 npx create-cra-template
 # or
 yarn create cra-template
+
+# or install globally
+yarn global add create-cra-template
+cct
 ```
 
 `template.json` and `template` will be generated. You can also edit `template.json` manually.
