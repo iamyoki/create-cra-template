@@ -2,6 +2,7 @@
 
 node_modules
 build
+lerna-debug.log
 
 # dependencies
 /node_modules
