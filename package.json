@@ -17,7 +17,7 @@
     "build:templates": "lerna exec cct --scope cra-template-*",
     "build": "yarn build:cct && yarn build:templates",
     "start:cct": "lerna run start --scope create-cra-template",
-    "start:templates": "chokidar './packages/create-cra-template/build' -c 'yarn run build:templates'",
+    "start:templates": "chokidar './packages/templates' '!**/template/**' '!**/*.json'  -c 'yarn run build:templates'",
     "start:app": "./bin/start-app.js",
     "start": "./bin/start.js"
   },
