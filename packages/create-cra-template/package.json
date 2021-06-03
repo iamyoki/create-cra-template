@@ -4,6 +4,7 @@
   "description": "A cli tool to generate cra-template by current create-react-app project.",
   "keywords": [
     "cra",
+    "template",
     "cra-template",
     "generator",
     "react",
