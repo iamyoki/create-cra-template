@@ -45,7 +45,7 @@
     "template.json",
     "template"
   ],
-  "gitHead": "1524e99b2266c207002a1e0b77ed57c86cef560f",
+  "gitHead": "fdbbef203652d9ffb1ef5aee2d5851b71b7a894f",
   "devDependencies": {
     "@craco/craco": "^6.1.2",
     "@emotion/babel-preset-css-prop": "^11.2.0",
