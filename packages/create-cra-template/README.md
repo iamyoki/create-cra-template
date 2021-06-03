@@ -63,6 +63,14 @@ npx create-react-app --template [YOUR_TEMPLATE_NAME]
 yarn create react-app --template [YOUR_TEMPLATE_NAME]
 ```
 
+## Built-in templates
+
+> ### [cra-template-popular](./packages/templates/cra-template-popular)
+> Work in progress...
+
+> ### [cra-template-ui](./packages/templates/cra-template-ui)
+> Work in progress...
+
 ---
 
 <p align="center">🎉 That's it! Enjoy your own template.</p>
