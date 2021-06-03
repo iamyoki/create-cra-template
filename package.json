@@ -1,7 +1,6 @@
 {
   "name": "create-cra-template",
   "private": true,
-  "type": "module",
   "workspaces": [
     "packages/*",
     "packages/templates/*"
