@@ -1,6 +1,10 @@
 # Create Cra Template
 
 <p align="center">
+  <img width="200" src="https://i.postimg.cc/RFkYXs3B/Dayflow-Black-Cat.png" alt="brand">
+</p>
+
+<p align="center">
 A cli tool to generate cra-template from current create-react-app project.
 </p>
 

@@ -1,6 +1,10 @@
 # Create Cra Template
 
 <p align="center">
+  <img width="200" src="https://i.postimg.cc/RFkYXs3B/Dayflow-Black-Cat.png" alt="brand">
+</p>
+
+<p align="center">
 A cli tool to generate cra-template from current create-react-app project.
 </p>
 
@@ -66,9 +70,11 @@ yarn create react-app --template [YOUR_TEMPLATE_NAME]
 ## Built-in templates
 
 > ### [cra-template-popular](./packages/templates/cra-template-popular)
+>
 > Work in progress...
 
 > ### [cra-template-ui](./packages/templates/cra-template-ui)
+>
 > Work in progress...
 
 ---
