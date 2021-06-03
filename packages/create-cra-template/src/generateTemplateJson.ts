@@ -27,6 +27,7 @@ export default async function generateTemplateJson(
     scripts,
     dependencies,
     devDependencies,
+    gitHead,
     ...rest
   } = packageJson
   // Remove unused fileds
