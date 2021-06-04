@@ -3,14 +3,13 @@
   "version": "1.0.16",
   "description": "A cli tool to generate cra-template by current create-react-app project.",
   "keywords": [
+    "react",
+    "create",
     "cra",
     "template",
-    "cra-template",
     "generator",
-    "react",
     "cli",
-    "create-react-app",
-    "create react template"
+    "create-react-app"
   ],
   "main": "build/index.js",
   "bin": {
