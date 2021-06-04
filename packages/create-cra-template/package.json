@@ -1,6 +1,6 @@
 {
   "name": "create-cra-template",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A cli tool to generate cra-template by current create-react-app project.",
   "keywords": [
     "react",
