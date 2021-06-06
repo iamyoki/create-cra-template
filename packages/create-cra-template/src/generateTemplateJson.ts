@@ -30,7 +30,7 @@ export default async function generateTemplateJson(
     gitHead,
     ...rest
   } = packageJson
-  // Remove unused fileds
+  // Remove unused fields
   if (dependencies) {
     delete dependencies['react']
     delete dependencies['react-dom']
