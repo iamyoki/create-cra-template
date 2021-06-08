@@ -1,5 +1,6 @@
 import { prompt } from 'inquirer'
 import pkgDir from 'pkg-dir'
+import clearPackageFileField from './clearPackageFileField'
 import clearTemplateFiles from './clearTemplateFiles'
 import generateTemplateFiles from './generateTemplateFiles'
 import generateTemplateJson from './generateTemplateJson'
@@ -24,4 +25,13 @@ export async function usage(argv: Argv) {
 
   await generateTemplateJson(rootDir)
   await generateTemplateFiles(rootDir)
+}
+
+export async function clear(argv: Argv) {
+  const { all } = argv
+
+  const rootDir = await pkgDir()
+
+  await clearTemplateFiles(rootDir)
+  if (all) await clearPackageFileField(rootDir)
 }

@@ -15,5 +15,11 @@ yargs_1.default(helpers_1.hideBin(process.argv))
     desc: 'Clear previous exports before generation',
     type: 'boolean'
 })
+    .command('clear [--all]', 'Clear previous exports', y => {
+    y.positional('all', {
+        alias: 'a',
+        desc: 'Clear all previous exports including package.json files field.'
+    });
+}, commands_1.clear)
     .alias('help', 'h')
     .alias('version', 'v').argv;
