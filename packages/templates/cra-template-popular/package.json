@@ -1,6 +1,6 @@
 {
   "name": "cra-template-popular",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
@@ -8,7 +8,7 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "create-cra-template": "^1.0.19",
+    "create-cra-template": "^1.0.20",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",

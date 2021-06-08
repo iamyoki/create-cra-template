@@ -3,7 +3,7 @@
     "packages/*",
     "packages/templates/*"
   ],
-  "version": "1.0.19",
+  "version": "1.0.20",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
