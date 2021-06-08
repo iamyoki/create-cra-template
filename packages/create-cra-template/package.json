@@ -1,7 +1,7 @@
 {
   "name": "create-cra-template",
   "version": "1.0.18",
-  "description": "A cli tool to generate cra-template by current create-react-app project.",
+  "description": "A cli tool to generate cra-template from current create-react-app project.",
   "keywords": [
     "react",
     "create",
@@ -11,10 +11,10 @@
     "cli",
     "create-react-app"
   ],
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "create-cra-template": "./bin/create-cra-template.js",
-    "cct": "./bin/create-cra-template.js"
+    "create-cra-template": "./dist/bin/create-cra-template.js",
+    "cct": "./dist/bin/create-cra-template.js"
   },
   "author": {
     "name": "Yoki Yu",
@@ -31,9 +31,10 @@
   "homepage": "https://github.com/iamyoki/create-cra-template/tree/main/packages/create-cra-template",
   "devDependencies": {
     "@types/fs-extra": "^9.0.11",
-    "@types/yargs": "^17.0.0",
+    "@types/inquirer": "^7.3.1",
     "@types/jsonfile": "^6.0.0",
-    "@types/signale": "^1.4.1"
+    "@types/signale": "^1.4.1",
+    "@types/yargs": "^17.0.0"
   },
   "dependencies": {
     "fs-extra": "^10.0.0",
