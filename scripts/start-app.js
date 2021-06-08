@@ -17,24 +17,22 @@ const path = require('path')
     throws: false
   })
 
-  inquirer
-    .prompt({
-      name: 'cra-template',
-      type: 'list',
-      message: 'Please select a cra-template to start',
-      default: config?.lastTemplate || dirs[0],
-      choices: dirs
-    })
-    .then(answer => {
-      const scope = answer['cra-template']
+  const answer = await inquirer.prompt({
+    name: 'cra-template',
+    type: 'list',
+    message: 'Please select a cra-template to start',
+    default: config?.lastTemplate || dirs[0],
+    choices: dirs
+  })
 
-      fs.writeJsonSync(configFile, {
-        lastTemplate: scope
-      })
+  const scope = answer['cra-template']
 
-      spawn('lerna', ['run', 'start', '--scope', scope], {
-        shell: true,
-        stdio: 'inherit'
-      })
-    })
+  fs.writeJsonSync(configFile, {
+    lastTemplate: scope
+  })
+
+  spawn('lerna', ['run', 'start', '--scope', scope], {
+    shell: true,
+    stdio: 'inherit'
+  })
 })()

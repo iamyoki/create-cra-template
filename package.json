@@ -5,12 +5,6 @@
     "packages/*",
     "packages/templates/*"
   ],
-  "devDependencies": {
-    "chokidar-cli": "^2.1.0",
-    "concurrently": "^6.2.0",
-    "lerna": "^4.0.0",
-    "typescript": "^4.3.2"
-  },
   "scripts": {
     "new-version": "lerna version --conventional-commits",
     "build:cct": "lerna run build --scope create-cra-template",
@@ -18,15 +12,19 @@
     "build": "yarn build:cct && yarn build:templates",
     "start:cct": "lerna run start --scope create-cra-template",
     "start:templates": "chokidar './packages/templates' '!**/template/**' '!**/*.json'  -c 'yarn run build:templates'",
-    "start:app": "./bin/start-app.js",
-    "start": "./bin/start.js"
+    "start:app": "./scripts/start-app.js",
+    "start": "./scripts/start.js"
   },
-  "dependencies": {
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "concurrently": "^6.2.0",
     "execa": "^5.0.1",
     "fs-extra": "^10.0.0",
     "globby": "^11.0.3",
-    "inquirer": "^8.1.0",
-    "is-npm": "^5.0.0"
+    "is-npm": "^5.0.0",
+    "lerna": "^4.0.0",
+    "typescript": "^4.3.2",
+    "inquirer": "^8.1.0"
   },
   "license": "MIT"
 }
