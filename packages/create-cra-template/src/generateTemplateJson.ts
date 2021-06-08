@@ -7,7 +7,7 @@ export default async function generateTemplateJson(
   outputDir: string = path.join(process.cwd())
 ) {
   // Get package.json file path
-  const packageFilePath = path.join(process.cwd(), 'package.json')
+  const packageFilePath = path.join(outputDir, 'package.json')
 
   // Check file exist
   try {
@@ -49,7 +49,7 @@ export default async function generateTemplateJson(
     }
   }
 
-  await fs.ensureDir(outputDir || path.join(process.cwd(), 'build-template'))
+  await fs.ensureDir(outputDir ?? path.join(process.cwd(), 'build-template'))
 
   // Write template.json
   await jsonfile.writeFile(
@@ -81,5 +81,5 @@ export default async function generateTemplateJson(
       console.error(err)
     })
 
-  signale.star('Modified: package.json files field')
+  signale.success('Modified: package.json files field')
 }

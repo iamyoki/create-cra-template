@@ -24,7 +24,7 @@ async function generateTemplateFiles(outputDir = path_1.default.join(process.cwd
         gitignore: true
     })) {
         const isGitignore = path_1.default.basename(p.toString()) === '.gitignore';
-        await fs_extra_1.default.copy(path_1.default.join(process.cwd(), p.toString()), path_1.default.resolve(outputDir, 'template', isGitignore ? 'gitignore' : p.toString()), {
+        await fs_extra_1.default.copy(path_1.default.join(outputDir, p.toString()), path_1.default.resolve(outputDir, 'template', isGitignore ? 'gitignore' : p.toString()), {
             overwrite: true,
             recursive: true
         });

@@ -29,7 +29,7 @@ export default async function generateTemplateFiles(
     const isGitignore = path.basename(p.toString()) === '.gitignore'
 
     await fs.copy(
-      path.join(process.cwd(), p.toString()),
+      path.join(outputDir, p.toString()),
       path.resolve(
         outputDir,
         'template',
@@ -40,6 +40,10 @@ export default async function generateTemplateFiles(
         recursive: true
       }
     )
-    signale.success(`Generated: template/${isGitignore ? 'gitignore' : path.basename(p.toString())}`)
+    signale.success(
+      `Generated: template/${
+        isGitignore ? 'gitignore' : path.basename(p.toString())
+      }`
+    )
   }
 }

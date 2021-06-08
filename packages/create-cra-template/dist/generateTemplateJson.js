@@ -9,7 +9,7 @@ const path_1 = __importDefault(require("path"));
 const signale_1 = __importDefault(require("signale"));
 async function generateTemplateJson(outputDir = path_1.default.join(process.cwd())) {
     // Get package.json file path
-    const packageFilePath = path_1.default.join(process.cwd(), 'package.json');
+    const packageFilePath = path_1.default.join(outputDir, 'package.json');
     // Check file exist
     try {
         await fs_extra_1.default.access(packageFilePath, fs_extra_1.default.constants.F_OK);
@@ -37,7 +37,7 @@ async function generateTemplateJson(outputDir = path_1.default.join(process.cwd(
             ...rest
         }
     };
-    await fs_extra_1.default.ensureDir(outputDir || path_1.default.join(process.cwd(), 'build-template'));
+    await fs_extra_1.default.ensureDir(outputDir ?? path_1.default.join(process.cwd(), 'build-template'));
     // Write template.json
     await jsonfile_1.default.writeFile(path_1.default.join(outputDir, 'template.json'), templateJson, { spaces: 2 });
     signale_1.default.success('Generated: template.json');
@@ -55,6 +55,6 @@ async function generateTemplateJson(outputDir = path_1.default.join(process.cwd(
         .catch(err => {
         console.error(err);
     });
-    signale_1.default.star('Modified: package.json files field');
+    signale_1.default.success('Modified: package.json files field');
 }
 exports.default = generateTemplateJson;
