@@ -12,6 +12,9 @@
     "create-react-app"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "bin": {
     "create-cra-template": "./dist/bin/create-cra-template.js",
     "cct": "./dist/bin/create-cra-template.js"
@@ -39,6 +42,7 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "globby": "^11.0.3",
+    "inquirer": "^8.1.0",
     "jsonfile": "^6.1.0",
     "pkg-dir": "^5.0.0",
     "signale": "^1.4.0",
