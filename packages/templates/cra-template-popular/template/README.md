@@ -1,4 +1,3 @@
-
 # Getting Started with Create React App
 
 > This library is still work in progress.

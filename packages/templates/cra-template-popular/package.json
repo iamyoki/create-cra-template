@@ -1,1 +1,63 @@
-{"name":"cra-template-popular","version":"1.0.18","dependencies":{"@emotion/react":"^11.4.0","@emotion/styled":"^11.3.0","@reach/router":"^1.3.4","@testing-library/jest-dom":"^5.12.0","@testing-library/react":"^11.2.7","@testing-library/user-event":"^12.8.3","create-cra-template":"^1.0.18","react":"^17.0.2","react-dom":"^17.0.2","react-scripts":"^4.0.3","web-vitals":"^1.1.2"},"scripts":{"start":"craco start","build":"craco build","test":"craco test","eject":"react-scripts eject","lint":"eslint --ext .js,.jsx --color","format":"prettier --write **/*.{js,jsx,json}"},"eslintConfig":{"extends":["react-app","react-app/jest"]},"browserslist":{"production":[">0.2%","not dead","not op_mini all"],"development":["last 1 chrome version","last 1 firefox version","last 1 safari version"]},"files":[],"gitHead":"41113e3591b8420c77d8a7510ebcf6997e7d86a3","devDependencies":{"@craco/craco":"^5.9.0","@emotion/babel-preset-css-prop":"^11.2.0","eslint":"^7.27.0","eslint-config-airbnb":"^18.2.1","eslint-config-prettier":"^8.3.0","eslint-plugin-import":"^2.23.4","eslint-plugin-jsx-a11y":"^6.4.1","eslint-plugin-prettier":"^3.4.0","eslint-plugin-react":"^7.24.0","eslint-plugin-react-hooks":"^4.2.0","husky":"^6.0.0","lint-staged":"^11.0.0","prettier":"^2.3.0"}}
+{
+  "name": "cra-template-popular",
+  "version": "1.0.18",
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@reach/router": "^1.3.4",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "create-cra-template": "^1.0.18",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx --color",
+    "format": "prettier --write **/*.{js,jsx,json}"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "template.json",
+    "template"
+  ],
+  "gitHead": "41113e3591b8420c77d8a7510ebcf6997e7d86a3",
+  "devDependencies": {
+    "@craco/craco": "^5.9.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0"
+  }
+}
