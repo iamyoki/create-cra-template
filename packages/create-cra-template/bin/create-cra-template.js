@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const build = require('../build')
 
-;(async () => {
-  await build.generateTemplateJson()
-  await build.generateTemplateFiles()
-})()
+const yargs = require('yargs')
+const { hideBin } = require('yargs/helpers')
+const pkg = require('../package.json')
+
+yargs(hideBin(process.argv)).usage('$0', pkg.description).argv
