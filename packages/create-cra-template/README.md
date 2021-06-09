@@ -1,7 +1,7 @@
 # Create Cra Template
 
 <p align="center">
-  <img width="200" src="https://i.postimg.cc/RFkYXs3B/Dayflow-Black-Cat.png" alt="brand">
+  <img height="220" src="https://i.postimg.cc/RFkYXs3B/Dayflow-Black-Cat.png" alt="brand">
 </p>
 
 <p align="center">
@@ -21,6 +21,14 @@ A cli tool to generate cra-template from current create-react-app project.
     <img alt="lines of code" src="https://img.shields.io/tokei/lines/github/iamyoki/create-cra-template?color=gold&style=for-the-badge">
   </a>
 </p>
+
+- [Create Cra Template](#create-cra-template)
+  - [Usage](#usage)
+  - [Publish to npm](#publish-to-npm)
+  - [Use your own template](#use-your-own-template)
+  - [CLI details](#cli-details)
+  - [Use in Node](#use-in-node)
+  - [Built-in templates](#built-in-templates)
 
 ## Usage
 
@@ -67,13 +75,70 @@ npx create-react-app --template [YOUR_TEMPLATE_NAME]
 yarn create react-app --template [YOUR_TEMPLATE_NAME]
 ```
 
+## CLI details
+
+There two commands `create-cra-template` and `cct`.
+
+Run `cct --help` to see more details.
+
+```shell
+cct
+
+ 🕹 📤 A cli tool to generate cra-template from current create-react-app
+ project.
+
+Commands:
+  cct                Generate template                                 [default]
+  cct clear [--all]  Clear previous exports
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+  -c, --clear    Clear previous exports before generation              [boolean]
+ create-cra-template main ✗  cct --help
+cct
+
+ 🕹 📤 A cli tool to generate cra-template from current create-react-app
+ project.
+
+Commands:
+  cct                Generate template                                 [default]
+  cct clear [--all]  Clear previous exports
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+  -c, --clear    Clear previous exports before generation              [boolean]
+```
+
+## Use in Node
+
+Below is a simple example of using `create-cra-template` in your project:
+
+```js
+const {
+  generateTemplateJson,
+  generateTemplateFiles,
+  clearPackageFileField,
+  clearTemplateFiles
+} = require('create-cra-template')
+
+const rootDir = process.cwd()
+
+;(async()=>{
+  await clearPackageFileField(rootDir)
+  await clearTemplateFiles(rootDir)
+  await generateTemplateJson(rootDir)
+  await generateTemplateFiles(rootDir)
+})()
+```
+
 ## Built-in templates
 
-> ### [cra-template-popular](./packages/templates/cra-template-popular)
+> ### [cra-template-popular](https://www.npmjs.com/package/cra-template-popular)
 >
 > Work in progress...
-
-> ### [cra-template-ui](./packages/templates/cra-template-ui)
+> ### [cra-template-ui](https://www.npmjs.com/package/cra-template-ui)
 >
 > Work in progress...
 

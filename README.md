@@ -72,12 +72,72 @@ npx create-react-app --template [YOUR_TEMPLATE_NAME]
 yarn create react-app --template [YOUR_TEMPLATE_NAME]
 ```
 
+## CLI details
+
+There two commands `create-cra-template` and `cct`.
+
+Run `cct --help` to see more details.
+
+```shell
+cct
+
+ 🕹 📤 A cli tool to generate cra-template from current create-react-app
+ project.
+
+Commands:
+  cct                Generate template                                 [default]
+  cct clear [--all]  Clear previous exports
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+  -c, --clear    Clear previous exports before generation              [boolean]
+ create-cra-template main ✗  cct --help
+cct
+
+ 🕹 📤 A cli tool to generate cra-template from current create-react-app
+ project.
+
+Commands:
+  cct                Generate template                                 [default]
+  cct clear [--all]  Clear previous exports
+
+Options:
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+  -c, --clear    Clear previous exports before generation              [boolean]
+```
+
+## Use in Node
+
+Below is a simple example of using `create-cra-template` in your project:
+
+```js
+const {
+  generateTemplateJson,
+  generateTemplateFiles,
+  clearPackageFileField,
+  clearTemplateFiles
+} = require('create-cra-template')
+
+const rootDir = process.cwd()
+
+;(async()=>{
+  await clearPackageFileField(rootDir)
+  await clearTemplateFiles(rootDir)
+  await generateTemplateJson(rootDir)
+  await generateTemplateFiles(rootDir)
+})()
+```
+
 ## Built-in templates
 
 > ### [cra-template-popular](./packages/templates/cra-template-popular)
+>
 > Work in progress...
 
 > ### [cra-template-ui](./packages/templates/cra-template-ui)
+>
 > Work in progress...
 
 ---

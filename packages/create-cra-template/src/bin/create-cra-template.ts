@@ -6,7 +6,8 @@ import pkg from '../../package.json'
 import { clear, usage } from '../commands'
 
 yargs(hideBin(process.argv))
-  .usage('$0', '🕹 📤' + pkg.description, {}, usage)
+  .usage(`$0 \n\n 🕹 📤 ${pkg.description}  `)
+  .command('$0', 'Generate template')
   .option('clear', {
     alias: 'c',
     desc: 'Clear previous exports before generation',
