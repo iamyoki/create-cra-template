@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamyoki/create-cra-template",
+    "url": "https://github.com/iamyoki/create-cra-template.git",
     "directory": "packages/create-cra-template"
   },
   "bugs": "https://github.com/iamyoki/create-cra-template/issues",

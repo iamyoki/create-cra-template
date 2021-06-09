@@ -6,6 +6,7 @@
     "packages/*",
     "packages/templates/*"
   ],
+  "repository": "https://github.com/iamyoki/create-cra-template.git",
   "scripts": {
     "new-version": "lerna version --conventional-commits",
     "build:cct": "lerna run build --scope create-cra-template",
