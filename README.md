@@ -92,20 +92,6 @@ Options:
   -h, --help     Show help                                             [boolean]
   -v, --version  Show version number                                   [boolean]
   -c, --clear    Clear previous exports before generation              [boolean]
- create-cra-template main ✗  cct --help
-cct
-
- 🕹 📤 A cli tool to generate cra-template from current create-react-app
- project.
-
-Commands:
-  cct                Generate template                                 [default]
-  cct clear [--all]  Clear previous exports
-
-Options:
-  -h, --help     Show help                                             [boolean]
-  -v, --version  Show version number                                   [boolean]
-  -c, --clear    Clear previous exports before generation              [boolean]
 ```
 
 ## Use in Node
