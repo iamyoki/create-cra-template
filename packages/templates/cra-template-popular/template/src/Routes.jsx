@@ -1,15 +1,19 @@
+/**
+ * Routes
+ */
+
 import { Router } from '@reach/router'
-import Navigation from './components/Navigation'
-import FirstPage from './pages/first-page'
-import SecondPage from './pages/second-page'
+import HomePage from './containers/HomePage'
+import PageWrapper from './containers/PageWrapper'
+import SecondPage from './containers/SecondPage'
 
 function Routes() {
   return (
     <Router id='router'>
-      <Navigation path='/'>
-        <FirstPage path='first' label='First' />
+      <PageWrapper path='/'>
+        <HomePage path='home' label='Home' />
         <SecondPage path='second' label='Second' />
-      </Navigation>
+      </PageWrapper>
     </Router>
   )
 }

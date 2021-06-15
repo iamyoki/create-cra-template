@@ -10,7 +10,7 @@ const package_json_1 = __importDefault(require("../../package.json"));
 const commands_1 = require("../commands");
 yargs_1.default(helpers_1.hideBin(process.argv))
     .usage(`$0 \n\n 🕹 📤 ${package_json_1.default.description}  `)
-    .command('$0', 'Generate template')
+    .command('$0', 'Generate template', {}, commands_1.usage)
     .option('clear', {
     alias: 'c',
     desc: 'Clear previous exports before generation',

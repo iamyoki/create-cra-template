@@ -7,7 +7,7 @@ import { clear, usage } from '../commands'
 
 yargs(hideBin(process.argv))
   .usage(`$0 \n\n 🕹 📤 ${pkg.description}  `)
-  .command('$0', 'Generate template')
+  .command('$0', 'Generate template', {}, usage)
   .option('clear', {
     alias: 'c',
     desc: 'Clear previous exports before generation',
