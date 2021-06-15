@@ -34,27 +34,22 @@ function Navigation({ children }) {
   const arrayChildren = React.Children.toArray(children.props.children)
 
   return (
-    <>
-      <nav className='Navigation' css={navCSS}>
-        {arrayChildren.map((child) => {
-          const { path, label } = child.props
+    <nav className='Navigation' css={navCSS}>
+      {arrayChildren.map((child) => {
+        const { path, label } = child.props
 
-          if (child.props.path === undefined) {
-            throw new Error(`${child.type.name} should have path prop.`)
-          }
+        if (child.props.path === undefined) {
+          throw new Error(`${child.type.name} should have path prop.`)
+        }
 
-          // Render nav link by nested routes
-          return (
-            <Link to={path} key={path} css={linkCSS}>
-              {label ?? child.type.name}
-            </Link>
-          )
-        })}
-      </nav>
-
-      {/* Render nested routes */}
-      {children}
-    </>
+        // Render nav link by nested routes
+        return (
+          <Link to={path} key={path} css={linkCSS}>
+            {label ?? child.type.name}
+          </Link>
+        )
+      })}
+    </nav>
   )
 }
 

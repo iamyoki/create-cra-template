@@ -6,7 +6,8 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,7 +19,6 @@
   "plugins": ["react"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/require-default-props": "off",
