@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/iamyoki/create-cra-template/compare/v1.0.22...v1.1.0) (2021-06-15)
+
+
+### Features
+
+* add repository to package.json ([ea112bc](https://github.com/iamyoki/create-cra-template/commit/ea112bc4534e6afb870e3831be0c3ce1eaa8baa3))
+
+
+
+
+
 ## [1.0.22](https://github.com/iamyoki/create-cra-template/compare/v1.0.21...v1.0.22) (2021-06-09)
 
 
