@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "A cli tool to generate cra-template from current create-react-app project.",
   "keywords": [
-    "react",
     "create",
     "cra",
     "template",
+    "react",
     "generator",
     "cli",
     "create-react-app"
