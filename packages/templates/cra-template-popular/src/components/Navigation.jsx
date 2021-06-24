@@ -15,7 +15,7 @@ const navCSS = css`
 const linkCSS = css`
   /* background-color: lavender; */
   color: lightslategray;
-  font-size: 18px;
+  font-size: 15px;
   padding: 8px 18px;
   margin: 0 12px;
   position: relative;

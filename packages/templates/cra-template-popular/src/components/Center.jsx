@@ -6,6 +6,7 @@ const Center = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 `
 
 export default Center
