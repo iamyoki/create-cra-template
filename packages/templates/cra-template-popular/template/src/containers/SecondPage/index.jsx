@@ -2,7 +2,7 @@
  * SecondPage
  */
 
-import Center from '@/components/Center'
+import Center from 'components/Center'
 
 function SecondPage() {
   return (

@@ -1,5 +1,5 @@
-import Center from '@/components/Center'
 import { css, keyframes } from '@emotion/react'
+import Center from 'components/Center'
 import { RiReactjsFill } from 'react-icons/ri'
 
 const spinAni = keyframes`

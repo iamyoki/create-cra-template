@@ -12,7 +12,7 @@ function Routes() {
   return (
     <Router id='router'>
       <PageWrapper path='/'>
-        <HomePage path='home' label='Home' />
+        <HomePage path='/' label='Home' />
         <SecondPage path='second' label='Second' />
         <NotfoundPage default />
       </PageWrapper>
