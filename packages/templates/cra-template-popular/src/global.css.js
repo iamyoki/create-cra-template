@@ -21,9 +21,11 @@ export default css`
     height: 100%;
   }
 
-  #router {
+  #router,
+  div[tabindex='-1'] {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   button {
