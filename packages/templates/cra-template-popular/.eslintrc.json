@@ -23,6 +23,7 @@
     "react/prop-types": "off",
     "react/require-default-props": "off",
     "import/no-cycle": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-unresolved": "off"
   }
 }
