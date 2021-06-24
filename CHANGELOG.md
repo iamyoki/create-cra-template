@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/iamyoki/create-cra-template/compare/v1.2.0...v1.2.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* remove craco-alias, fix path alias error ([4e8419b](https://github.com/iamyoki/create-cra-template/commit/4e8419bfbc7e617e606b29641a72ffe1a80839af))
+
+
+
+
+
 # [1.2.0](https://github.com/iamyoki/create-cra-template/compare/v1.1.0...v1.2.0) (2021-06-24)
 
 
