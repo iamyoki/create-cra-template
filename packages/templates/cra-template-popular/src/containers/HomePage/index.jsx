@@ -1,12 +1,13 @@
+import Center from '@/components/Center'
+
 /**
  * HomePage
  */
-
 function HomePage() {
   return (
-    <div className='HomePage'>
+    <Center className='HomePage'>
       <h1>Home Page</h1>
-    </div>
+    </Center>
   )
 }
 

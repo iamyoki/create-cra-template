@@ -8,6 +8,7 @@ function PageWrapper({ children }) {
   return (
     <>
       <Navigation>{children}</Navigation>
+
       {children}
     </>
   )
