@@ -1,8 +1,20 @@
 import { css } from '@emotion/react'
 import { normalize } from 'polished'
 
+const normalizeBoxSizing = css`
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+`
+
 export default css`
   ${normalize()}
+  ${normalizeBoxSizing}
 
   // Base
   html,body,#root,#router {
