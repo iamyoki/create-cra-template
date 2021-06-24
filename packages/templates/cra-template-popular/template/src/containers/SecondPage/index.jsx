@@ -2,11 +2,13 @@
  * SecondPage
  */
 
+import Center from '@/components/Center'
+
 function SecondPage() {
   return (
-    <div className='SecondPage'>
+    <Center className='SecondPage'>
       <h1>SecondPage</h1>
-    </div>
+    </Center>
   )
 }
 
