@@ -1,5 +1,13 @@
 {
   "package": {
+    "scripts": {
+      "start": "craco start",
+      "build": "craco build",
+      "test": "craco test",
+      "eject": "react-scripts eject",
+      "lint": "eslint --ext .js,.jsx --color",
+      "format": "prettier --write **/*.{js,jsx,json}"
+    },
     "dependencies": {
       "@emotion/react": "^11.4.0",
       "@emotion/styled": "^11.3.0",
