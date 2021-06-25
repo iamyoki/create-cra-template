@@ -43,6 +43,7 @@ export default async function generateTemplateJson(
 
   const templateJson = {
     package: {
+      scripts,
       dependencies,
       devDependencies,
       ...rest

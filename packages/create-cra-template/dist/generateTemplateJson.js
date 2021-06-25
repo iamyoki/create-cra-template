@@ -32,6 +32,7 @@ async function generateTemplateJson(outputDir = path_1.default.join(process.cwd(
     }
     const templateJson = {
         package: {
+            scripts,
             dependencies,
             devDependencies,
             ...rest
