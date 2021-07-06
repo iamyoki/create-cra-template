@@ -1,72 +1,165 @@
-# Getting Started with Create React App
+# Cra Tempalte Popular
 
-> This library is still work in progress.
+A [CRA](https://github.com/facebook/create-react-app/tree/master/packages/cra-template) template with the most popular libraries installed.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This template was built by [create-cra-template](https://www.npmjs.com/package/create-cra-template), also called 'cct'. You can built your own template using cct.
 
-## Available Scripts
+## Essential popular libraries including
 
-In the project directory, you can run:
+- [Reach Router](https://reach.tech/router/)
+- [Emotion](https://emotion.sh/)
+- [Polished](https://polished.js.org/)
+- [React Icons](https://react-icons.github.io/react-icons)
+- [React Use](https://github.com/streamich/react-use)
+- [Use Query Params]()
 
-### `npm start`
+## Router
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use [Reach Router](https://reach.tech/router/) instead of **react-router-dom**, because **reach router** is smaller and faster and more semantic.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Basic:
 
-### `npm test`
+```js
+function App() {
+  return <Router>
+    <HomePage path='/' />
+    <Dashboard path='/dashboard'>
+      <Tab1 path='/dashboard/1' />
+      <Tab2 path='/dashboard/2' />
+    </Dashboard>
+  </Router>
+}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to a route:
 
-### `npm run build`
+```js
+import {navigate} from 'reach-router'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+if(noAuth) navigate('/login')
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Replace to a route:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+function SomePage({navigate}) {
+  const replaceToHome = ()=>navigate('home', {replace: true})
 
-### `npm run eject`
+  return ...
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Global route listener, scroll to top when push:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+import {globalHistory} from 'reach-router'
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+globalHistory.listen(({ action }) => {
+  if (action === 'PUSH')
+    window.scrollTo({
+      behavior: 'auto',
+      top: 0,
+    })
+})
+```
 
-## Learn More
+## CSS in JS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use [Emotion](https://emotion.sh/) instead of [styled-components](https://styled-components.com/), because [Emotion](https://emotion.sh/) is more intuitive, also you can use `@emotion/styled` as `styled-components`. When you copy paste a part of component's html tags, it brings css, how convenient it is.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Basic example:
 
-### Code Splitting
+```js
+import { css } from '@emotion/react'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+function Button({children}) {
+  return <button css={css`
+    color: slateblue;
+    background-color: whitesmoke;
+  `}>{children}</button>
+}
+```
 
-### Analyzing the Bundle Size
+CSS selector:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+import { css } from '@emotion/react'
 
-### Making a Progressive Web App
+function Add() {
+  return <div css={css`
+    color: slateblue;
+    background-color: whitesmoke;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    .add {
+      font-size: 18px;
+    }
 
-### Advanced Configuration
+    &:hover {
+      .add {
+        color: orangered;
+      }
+    }
+  `}>
+    <i className="add">+</i>
+  </button>
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Extract CSS:
 
-### Deployment
+```js
+import { css } from '@emotion/react'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+const addCSS = css`
+  color: slateblue;
+  background-color: whitesmoke;
 
-### `npm run build` fails to minify
+  .add {
+    font-size: 18px;
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  &:hover {
+    .add {
+      color: orangered;
+    }
+  }
+`
+
+function Add() {
+  return <button css={addCSS}>
+    <i className="add">+</i>
+  </button>
+}
+```
+
+Conditioal CSS:
+
+```js
+import { css } from '@emotion/react'
+
+const toggleCSS = ...
+const activeCSS = css`
+  color: blue;
+`
+
+function Toggle({onOff}) {
+  return <Switch css={[toggleCSS, onOff ? activeCSS : null]} />
+}
+```
+
+Make util CSS:
+
+```js
+import { css } from '@emotion/react'
+
+export const center = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const boxShadow = (deep=.5) => css`
+  box-shadow: 0 0 10px ${rgba('black', deep)};
+`
+```
