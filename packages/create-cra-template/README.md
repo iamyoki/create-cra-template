@@ -11,7 +11,6 @@ A cli tool to generate cra-template from current create-react-app project.
 <p align="center">
   <a href="https://www.npmjs.com/package/create-cra-template">
     <img alt="npm" src="https://img.shields.io/npm/v/create-cra-template?color=slateblue&label=create-cra-template&logo=npm&style=for-the-badge">
-    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/create-cra-template?color=palegreen&style=for-the-badge">
   </a>
 </p>
 <p align="center">
